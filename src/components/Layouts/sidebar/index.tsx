@@ -1,6 +1,5 @@
 "use client";
 
-import { Logo } from "@/components/logo";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -34,7 +33,6 @@ export function Sidebar() {
               toggleExpanded(item.title);
             }
 
-            // Break the loop
             return true;
           }
         });
@@ -61,7 +59,7 @@ export function Sidebar() {
           isOpen ? "w-full" : "w-0",
         )}
         style={{
-          boxShadow: "4px 0 10px rgba(0, 0, 0, 0.3)", // sombra lateral direita
+          boxShadow: "4px 0 10px rgba(0, 0, 0, 0.3)",
         }}
       >
         <div className="flex h-full flex-col py-10 pl-[25px] pr-[7px]">
@@ -70,9 +68,7 @@ export function Sidebar() {
               href={"/"}
               onClick={() => isMobile && toggleSidebar()}
               className="px-0 py-2.5 min-[850px]:py-0"
-            >
-              <Logo />
-            </Link>
+            ></Link>
 
             {isMobile && (
               <button
@@ -90,7 +86,7 @@ export function Sidebar() {
           <div className="custom-scrollbar mt-6 flex-1 overflow-y-auto pr-3 min-[850px]:mt-10">
             {NAV_DATA.map((section) => (
               <div key={section.label} className="mb-6">
-                <h2 className="mb-5 text-sm font-medium text-dark-4 dark:text-dark-6">
+                <h2 className="mb-5 text-sm font-medium text-white dark:text-white/80">
                   {section.label}
                 </h2>
 
