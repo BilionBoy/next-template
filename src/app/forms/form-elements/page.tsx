@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { GlobeIcon } from "../../../../public/assets/icons";
+import { GlobeIcon } from "../../../assets/icons";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 import DatePickerOne from "@/components/FormElements/DatePicker/DatePickerOne";
 import DatePickerTwo from "@/components/FormElements/DatePicker/DatePickerTwo";

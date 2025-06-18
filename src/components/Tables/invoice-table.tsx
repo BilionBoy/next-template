@@ -1,4 +1,4 @@
-import { TrashIcon } from "../../../public/assets/icons";
+import { TrashIcon } from "../../assets/icons";
 import {
   Table,
   TableBody,

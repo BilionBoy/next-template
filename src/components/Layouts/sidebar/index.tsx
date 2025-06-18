@@ -61,7 +61,7 @@ export function Sidebar() {
           isOpen ? "w-full" : "w-0",
         )}
         style={{
-          boxShadow: "2px 0 8px rgba(0,0,0,0.1)", // sombra sutil
+          boxShadow: "4px 0 10px rgba(0, 0, 0, 0.3)", // sombra lateral direita
         }}
       >
         <div className="flex h-full flex-col py-10 pl-[25px] pr-[7px]">

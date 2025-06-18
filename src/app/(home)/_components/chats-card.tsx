@@ -1,4 +1,4 @@
-import { DotIcon } from "../../../../public/assets/icons";
+import { DotIcon } from "../../../assets/icons";
 import { formatMessageTime } from "@/lib/format-message-time";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
