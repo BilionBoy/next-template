@@ -55,13 +55,14 @@ export function Sidebar() {
 
       <aside
         className={cn(
-          "max-w-[290px] overflow-hidden border-r border-gray-200 bg-white transition-[width] duration-200 ease-linear dark:border-gray-800 dark:bg-gray-dark",
+          "max-w-[290px] overflow-hidden transition-[width] duration-200 ease-linear",
+          "bg-[#0A2A49] text-white dark:bg-[#0A2A49]",
           isMobile ? "fixed bottom-0 top-0 z-50" : "sticky top-0 h-screen",
           isOpen ? "w-full" : "w-0",
         )}
-        aria-label="Main navigation"
-        aria-hidden={!isOpen}
-        inert={!isOpen}
+        style={{
+          boxShadow: "2px 0 8px rgba(0,0,0,0.1)", // sombra sutil
+        }}
       >
         <div className="flex h-full flex-col py-10 pl-[25px] pr-[7px]">
           <div className="relative pr-4.5">
