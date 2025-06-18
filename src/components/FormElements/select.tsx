@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronUpIcon } from "@/assets/icons";
+import { ChevronUpIcon } from "../../../public/assets/icons";
 import { cn } from "@/lib/utils";
 import { useId, useState } from "react";
 

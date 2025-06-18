@@ -1,4 +1,4 @@
-import { TrendingUpIcon } from "@/assets/icons";
+import { TrendingUpIcon } from "../../../../public/assets/icons";
 import { compactFormat } from "@/lib/format-number";
 import { cn } from "@/lib/utils";
 import { getCampaignVisitorsData } from "@/services/charts.services";
