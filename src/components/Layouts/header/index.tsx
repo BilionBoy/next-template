@@ -13,12 +13,12 @@ export function Header() {
   const { toggleSidebar, isMobile } = useSidebarContext();
 
   return (
-    <header className="sticky top-0 z-30 flex items-center justify-between border-[#1C4D78] bg-[#0A2A49] px-4 py-5 shadow-[0_2px_6px_rgba(0,0,0,0.2)] md:px-5 2xl:px-10">
+    <header className="sticky top-0 z-30 flex items-center justify-between rounded-b-2xl border-b border-gray-100 bg-white/95 px-4 py-5 shadow-[0_4px_20px_rgba(0,0,0,0.08)] backdrop-blur-xl md:px-5 2xl:px-10">
       <button
         onClick={toggleSidebar}
-        className="rounded-lg border border-white/20 bg-[#093359] px-1.5 py-1 hover:bg-[#0f4475] lg:hidden"
+        className="rounded-lg border border-gray-200 bg-gray-50 px-1.5 py-1 transition-colors duration-200 hover:bg-gray-100 lg:hidden"
       >
-        <MenuIcon className="text-white" />
+        <MenuIcon className="text-gray-600" />
         <span className="sr-only">Toggle Sidebar</span>
       </button>
 
@@ -35,10 +35,10 @@ export function Header() {
       )}
 
       <div className="max-xl:hidden">
-        <h1 className="mb-0.5 text-heading-5 font-bold text-white">
+        <h1 className="mb-0.5 text-heading-5 font-bold text-gray-800">
           Painel Administrativo
         </h1>
-        <p className="font-medium text-white/80">
+        <p className="font-medium text-gray-600">
           Aqui terá as descrições dinâmicas
         </p>
       </div>
@@ -48,9 +48,9 @@ export function Header() {
           <input
             type="search"
             placeholder="Buscar..."
-            className="flex w-full items-center gap-3.5 rounded-full border border-white/20 bg-[#093359] py-3 pl-[53px] pr-5 text-white placeholder-white/60 outline-none transition-colors focus-visible:border-white focus-visible:ring-1 focus-visible:ring-white"
+            className="flex w-full items-center gap-3.5 rounded-full border border-gray-200 bg-gray-50/80 py-3 pl-[53px] pr-5 text-gray-700 placeholder-gray-500 outline-none transition-colors hover:border-gray-300 focus-visible:border-blue-300 focus-visible:ring-2 focus-visible:ring-blue-500/20"
           />
-          <SearchIcon className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-white max-[1015px]:size-5" />
+          <SearchIcon className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 max-[1015px]:size-5" />
         </div>
 
         <ThemeToggleSwitch />

@@ -1,25 +1,30 @@
+"use client";
+
+import type React from "react";
+
 import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 import Link from "next/link";
 import { useSidebarContext } from "./sidebar-context";
 
 const menuItemBaseStyles = cva(
-  "rounded-lg px-3.5 font-medium transition-all duration-200 text-white dark:text-white",
+  "rounded-xl px-3.5 font-medium transition-all duration-200 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:ring-offset-2 focus:ring-offset-transparent",
   {
     variants: {
       isActive: {
         true: `
-          bg-[rgba(87,80,241,0.07)]
-          text-primary
-          hover:bg-[rgba(87,80,241,0.07)]
-          dark:bg-[#FFFFFF1A]
-          dark:text-white
+          bg-gradient-to-r from-blue-50 to-blue-50/50 
+          text-blue-700
+          shadow-sm
+          border border-blue-100
+          hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-50/50
+          hover:shadow-md
         `,
         false: `
-          hover:bg-[#112E4A]
-          hover:text-[#45A2F9]
-          dark:hover:bg-[#1C3C5C]
-          dark:hover:text-[#45A2F9]
+          hover:bg-gray-50/80
+          hover:text-gray-800
+          hover:shadow-sm
+          hover:scale-[1.02]
         `,
       },
     },
@@ -61,10 +66,13 @@ export function MenuItem(
     <button
       onClick={props.onClick}
       aria-expanded={props.isActive}
-      className={menuItemBaseStyles({
-        isActive: props.isActive,
-        className: "flex w-full items-center gap-3 py-3",
-      })}
+      className={cn(
+        menuItemBaseStyles({
+          isActive: props.isActive,
+          className: "flex w-full items-center gap-3 py-3",
+        }),
+        props.className,
+      )}
     >
       {props.children}
     </button>
