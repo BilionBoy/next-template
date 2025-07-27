@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronUpIcon } from "@/assets/icons";
+import { ChevronUpIcon } from "../../../../assets/icons";
 import {
   Dropdown,
   DropdownContent,
@@ -17,7 +17,7 @@ export function UserInfo() {
 
   const USER = {
     name: "Dhiogo",
-    email: "johnson@nextadmin.com",
+    email: "dhiogoandre26@gmail.com",
     img: "/images/user/dhio.png",
   };
 
@@ -35,7 +35,7 @@ export function UserInfo() {
             width={200}
             height={200}
           />
-          <figcaption className="flex items-center gap-1 font-medium text-dark dark:text-dark-6 max-[1024px]:sr-only">
+          <figcaption className="flex items-center gap-1 font-medium text-white dark:text-white/80 max-[1024px]:sr-only">
             <span>{USER.name}</span>
 
             <ChevronUpIcon
